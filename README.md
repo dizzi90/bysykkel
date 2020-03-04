@@ -14,7 +14,7 @@ cd bysykkel
 ### Simple
 ````shell
 $ pipenv shell
-$ (bysykkel) python3 app/app.py
+(bysykkel) $ pipenv run gunicorn -w3 --bind 0.0.0.0:3000 --access-logfile city_bike:app
 ````
 
 ### Docker
@@ -22,3 +22,5 @@ $ (bysykkel) python3 app/app.py
 $ docker build -f deploy/Dockerfile -t bysykkel:test .
 $ docker run -p 3000:3000 bysykkel:test
 ````
+
+[localhost:3000](http://localhost:3000/)
