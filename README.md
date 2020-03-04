@@ -1,4 +1,4 @@
-# CityBike
+# city_bike.py
 _A small script to get all city bike stations, their capacity and number of available bikes. Built with python and Flask using OsloBysykkel APIs_
 
 ![](city_bike_screenshot.png)
