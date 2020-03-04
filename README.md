@@ -14,7 +14,7 @@ cd bysykkel
 ### Simple
 ````shell
 $ pipenv shell
-(bysykkel) $ pipenv run gunicorn -w3 --bind 0.0.0.0:3000 --access-logfile city_bike:app
+(bysykkel) $ gunicorn -w3 --bind 0.0.0.0:3000 --access-logfile city_bike:app
 ````
 
 ### Docker
