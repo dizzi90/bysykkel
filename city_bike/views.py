@@ -27,7 +27,7 @@ def show_bikes():
         Render a site with a list of all bike stations and their availability
     '''
     location = get_location()
-    all_stations = Stations()
+    all_stations = Stations(logger=app.logger)
 
     stations = all_stations.get_stations(location)
 

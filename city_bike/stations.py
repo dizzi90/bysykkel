@@ -78,9 +78,12 @@ class CityBikeApiConnection():
             response.raise_for_status()
         except HTTPError as e:
             if self.logger is not None:
-                self.logger.error(e.with_traceback)
+                self.logger.error(e)
 
             print(e.with_traceback)
+        except Exception as e:
+            if self.logger is not None:
+                self.logger.error(e)
         return response.json()['data']['stations']
 
     def get_station_information(self) -> list:
@@ -98,14 +101,14 @@ class CityBikeApiConnection():
         return self._get_by_api_suburi('/station_status.json')
 
 
-class Stations():
+class Stations:
     '''
         Represents all city bike stations
     '''
 
-    def __init__(self):
+    def __init__(self, logger=None):
 
-        self.connection = CityBikeApiConnection()
+        self.connection = CityBikeApiConnection(logger=logger)
         self.stations = []
         self._update_station_information()
 

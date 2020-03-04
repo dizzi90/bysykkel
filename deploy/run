@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd /usr/local/app/
-exec su -c 'pipenv run gunicorn -w3 --bind 0.0.0.0:3000 city_bike:app' appuser
+exec su -c 'pipenv run gunicorn -w3 --bind 0.0.0.0:3000 --access-logfile city_bike:app' appuser
