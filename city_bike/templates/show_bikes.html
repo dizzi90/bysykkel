@@ -1,0 +1,37 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title id="title">City Bikes Oslo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon taken from citybike site -->
+    <link rel="icon" href="https://assets.urbansharing.design/v1/favicons/public-web/blue02/favicon-16x16.png" type="image/x-icon" sizes="16x16">
+    <link rel="icon" href="https://assets.urbansharing.design/v1/favicons/public-web/blue02/favicon-32x32.png" type="image/x-icon" sizes="32x32">
+    <link rel="apple-touch-icon" href="https://assets.urbansharing.design/v1/favicons/public-web/blue02/apple-touch-icon-180x180.png" type="image/png" sizes="180x180">
+
+</head>
+<h1>
+    Oslo CityBike 🚴‍♂️
+</h1>
+
+<body>
+    <div id="container">
+        {% for item in data %}
+        <p class="station">
+            <div class="station-title">
+                {{ item.0 }} <br />
+            </div>
+            <div class="station-bikes">
+                {{ item.1 }}
+                <span class="station-icon">
+                    {{ item.2 }}
+                    
+                </span>
+                <br /> {{ item.3 }}
+                <span class="station-icon">
+                    {{ item.4 }}
+                </span>
+            </div>
+        </p>
+        {% endfor %}
+    </div>
+</body>

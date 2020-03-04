@@ -1,0 +1,50 @@
+body {
+    text-align: center;
+    font-family: "Urban Grotesk", "Helvetica Neue", sans-serif;
+    /* Bysykkel blue */
+    background-color: rgb(0, 95, 201);
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    margin: auto;
+    width: 70%;
+    max-width: 1080px;
+}
+
+p {
+    font-weight: 50000;
+    background-color: beige;
+    text-rendering: optimizelegibility;
+    font-size: 20px;
+}
+
+.station {
+    text-align: center;
+    background-color: rgb(11, 27, 72);
+}
+
+.station-title {
+    text-align: center;
+    background-color: rgb(11, 27, 72);
+    color: white;
+}
+
+.station-bikes {
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.station-parking {
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.station-icon {
+    text-align: right;
+}
